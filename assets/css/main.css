@@ -398,3 +398,99 @@ a:focus-visible {
   outline-offset: 3px;
   border-radius: 2px;
 }
+
+/* ---------- Brand / logo ---------- */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+}
+
+.logo-mark {
+  width: 26px;
+  height: 26px;
+  color: var(--oxblood);
+  flex-shrink: 0;
+  transition: transform 0.4s ease;
+}
+
+.brand:hover .logo-mark { transform: rotate(180deg); }
+.brand:hover .wordmark { color: var(--oxblood); }
+
+/* ---------- About page ---------- */
+
+.about-page {
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem 2.5rem;
+}
+
+.about-more { margin-top: 0.25rem; }
+
+.about-more a {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: var(--oxblood);
+}
+
+.about-more a:hover { text-decoration: underline; }
+
+/* ---------- Career register ---------- */
+
+.career {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+  max-width: var(--measure);
+}
+
+.career-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.05rem 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.career-firm { font-size: 1.25rem; }
+
+.career-title {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
+  white-space: nowrap;
+}
+
+.career-note {
+  margin: 1.5rem 0 0;
+  font-size: 1rem;
+  color: var(--slate);
+}
+
+.career-note a { color: var(--oxblood); }
+
+/* ---------- Ventures coming soon ---------- */
+
+.coming-soon {
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: 1rem 1.5rem 6rem;
+}
+
+.coming-soon-mark { color: var(--oxblood); margin: 0 0 1.25rem; }
+
+.coming-soon-copy {
+  color: var(--slate);
+  max-width: var(--measure);
+  margin: 0;
+}
+
+.coming-soon-copy a { color: var(--oxblood); }
