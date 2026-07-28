@@ -7,6 +7,14 @@ author:
   name: Anandit Joshi
 
 markdown: kramdown
+permalink: /perspectives/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
 exclude:
   - README.md

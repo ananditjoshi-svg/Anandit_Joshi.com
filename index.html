@@ -15,3 +15,20 @@ title: Home
     <p class="about-more"><a href="{{ '/about/' | relative_url }}">More about me →</a></p>
   </div>
 </section>
+
+<section class="ledger-section">
+  <h2 class="section-label">Latest perspectives</h2>
+  <ol class="ledger">
+    {% for post in site.posts limit: 3 %}
+    <li class="ledger-row">
+      <a href="{{ post.url | relative_url }}">
+        <time class="ledger-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" | upcase }}</time>
+        <span class="ledger-title">{{ post.title }}</span>
+        <span class="ledger-tag">{{ post.tag | default: "Perspective" }}</span>
+        <span class="ledger-arrow" aria-hidden="true">→</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+  <p class="ledger-more"><a href="{{ '/perspectives/' | relative_url }}">All perspectives →</a></p>
+</section>
