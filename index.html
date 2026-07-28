@@ -4,35 +4,14 @@ title: Home
 ---
 <section class="hero">
   <p class="eyebrow reveal">Anandit Joshi · AI &amp; Data · Boston</p>
-  <h1 class="hero-title reveal d1">Notes on building <em>intelligent&nbsp;systems</em> for private&nbsp;markets.</h1>
-  <p class="hero-sub reveal d2">Research and working notes on agentic AI, enterprise data architecture, and the investor lifecycle — written from twenty years of building inside alternative asset management.</p>
+  <h1 class="hero-title reveal d1">Building <em>intelligent&nbsp;systems</em> for private&nbsp;markets.</h1>
+  <p class="hero-sub reveal d2">Two decades at the intersection of institutional capital and applied AI — client intelligence, agentic systems, investor lifecycle technology, and the data architecture beneath it all.</p>
 </section>
 
 <section class="about" id="intro">
   <h2 class="section-label">About</h2>
   <div class="about-body">
-    <p>I'm AJ — a senior AI and data leader working at the intersection of institutional capital and applied AI: client intelligence, agentic systems, investor lifecycle technology, and enterprise data architecture.</p>
+    <p>I'm AJ — a senior AI and data leader in alternative investments, most recently a Principal at Ares Management and before that at Bain Capital. This site is my digital space: who I am, what I focus on, and what I'm building.</p>
     <p class="about-more"><a href="{{ '/about/' | relative_url }}">More about me →</a></p>
   </div>
-</section>
-
-<section class="ledger-section">
-  <h2 class="section-label">Research</h2>
-  {% if site.posts.size > 0 %}
-  <ol class="ledger">
-    {% for post in site.posts limit: 5 %}
-    <li class="ledger-row">
-      <a href="{{ post.url | relative_url }}">
-        <time class="ledger-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" | upcase }}</time>
-        <span class="ledger-title">{{ post.title }}</span>
-        <span class="ledger-tag">{{ post.tag | default: "Note" }}</span>
-        <span class="ledger-arrow" aria-hidden="true">→</span>
-      </a>
-    </li>
-    {% endfor %}
-  </ol>
-  <p class="ledger-more"><a href="{{ '/research/' | relative_url }}">View the full register →</a></p>
-  {% else %}
-  <p class="ledger-empty">The register opens soon — the first study is in progress.</p>
-  {% endif %}
 </section>
