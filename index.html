@@ -17,7 +17,8 @@ title: Home
 </section>
 
 <section class="ledger-section">
-  <h2 class="section-label">Recent research</h2>
+  <h2 class="section-label">Research</h2>
+  {% if site.posts.size > 0 %}
   <ol class="ledger">
     {% for post in site.posts limit: 5 %}
     <li class="ledger-row">
@@ -31,4 +32,7 @@ title: Home
     {% endfor %}
   </ol>
   <p class="ledger-more"><a href="{{ '/research/' | relative_url }}">View the full register →</a></p>
+  {% else %}
+  <p class="ledger-empty">The register opens soon — the first study is in progress.</p>
+  {% endif %}
 </section>

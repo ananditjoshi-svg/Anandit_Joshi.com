@@ -9,6 +9,7 @@ title: Research
 </section>
 
 <section class="ledger-section">
+  {% if site.posts.size > 0 %}
   <ol class="ledger">
     {% for post in site.posts %}
     <li class="ledger-row">
@@ -21,4 +22,7 @@ title: Research
     </li>
     {% endfor %}
   </ol>
+  {% else %}
+  <p class="ledger-empty">The register opens soon — the first study is in progress.</p>
+  {% endif %}
 </section>
