@@ -442,7 +442,8 @@ a:focus-visible {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--slate);
-  white-space: nowrap;
+  text-align: right;
+  max-width: 22rem;
 }
 
 .career-note {
