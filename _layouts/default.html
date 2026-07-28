@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.url != "/" %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — AI &amp; Data in Private Markets{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' font-family='Georgia'>A</text></svg>">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="{{ '/' | relative_url }}">Anandit&nbsp;Joshi</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="{{ '/#about' | relative_url }}">About</a>
+      <a href="{{ '/research/' | relative_url }}">Research</a>
+      <a href="{{ '/#contact' | relative_url }}">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <p class="footer-lede">Get in touch</p>
+      <p class="footer-links">
+        <a href="mailto:hello@ananditjoshi.com">hello@ananditjoshi.com</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://www.linkedin.com/in/ananditjoshi" rel="me">LinkedIn</a>
+      </p>
+      <p class="footer-fine">© {{ site.time | date: "%Y" }} Anandit Joshi · Boston, MA</p>
+    </div>
+  </footer>
+</body>
+</html>

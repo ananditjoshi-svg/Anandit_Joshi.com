@@ -1,0 +1,21 @@
+title: Anandit Joshi
+description: Notes on building intelligent systems for private markets — AI, data, and the investor lifecycle.
+url: "https://ananditjoshi.com"
+baseurl: ""
+
+author:
+  name: Anandit Joshi
+
+markdown: kramdown
+permalink: /research/:year/:slug/
+
+# Collections & defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - README.md

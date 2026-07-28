@@ -1,0 +1,24 @@
+---
+layout: default
+title: Research
+---
+<section class="hero hero-compact">
+  <p class="eyebrow">The register</p>
+  <h1 class="hero-title">Research &amp; studies</h1>
+  <p class="hero-sub">Every published piece, newest first. Longer studies and shorter working notes live side by side.</p>
+</section>
+
+<section class="ledger-section">
+  <ol class="ledger">
+    {% for post in site.posts %}
+    <li class="ledger-row">
+      <a href="{{ post.url | relative_url }}">
+        <time class="ledger-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" | upcase }}</time>
+        <span class="ledger-title">{{ post.title }}</span>
+        <span class="ledger-tag">{{ post.tag | default: "Note" }}</span>
+        <span class="ledger-arrow" aria-hidden="true">→</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
